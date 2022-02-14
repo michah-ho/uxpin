@@ -75,7 +75,7 @@ const PropertiesList = ({ data, setData }) => {
             }
           </HiddenCol>
           <div>
-            <span className="span-button plus-button" onClick={() => toggleListItemOpen(`${listKey}-${idx}`)}>
+            <span className="span-button plus-button" data-testid="plus-button" onClick={() => toggleListItemOpen(`${listKey}-${idx}`)}>
               <img src={listItemOpen[`${listKey}-${idx}`] ? CloseIcon : PlusIcon} alt="plus icon" />
             </span>
           </div>
