@@ -1,3 +1,7 @@
+# UX PIN Assignment
+
+Please run npm i and then npm start to see this running on localhost. 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
