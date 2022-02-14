@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Header from "./components/Header";
+import MainContainer from "./components/styledComponents/MainContainer";
+import ComponentsPreview from "./components/ComponentsPreview";
+import Properties from "./components/Properties";
 
 function App() {
+  const [isDiscard, setIsDiscard] = useState(false);
+  const [isSaved, setIsSaved] = useState(false);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header setIsDiscard={setIsDiscard} setIsSaved={setIsSaved} />
+      <MainContainer>
+        <ComponentsPreview />
+        <Properties
+          isSaved={isSaved}
+          setIsSaved={setIsSaved}
+          isDiscard={isDiscard}
+          setIsDiscard={setIsDiscard}
+        />
+      </MainContainer>
     </div>
   );
 }
